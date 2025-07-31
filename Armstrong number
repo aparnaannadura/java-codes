@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int copy=n;
+        int ans=0;
+        int digits=String.valueOf(n).length();
+        while(n>0)
+        {
+            int digit=n%10;
+            int a=(int)Math.pow(digit,digits);
+            ans+=a;
+            n/=10;
+        }
+        if(copy==ans)
+        {
+            
+            System.out.println("Armstrong number");
+        }
+        else{
+            System.out.println("Not an Armstrong number");
+        }
+    }
+}
