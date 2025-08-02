@@ -1,0 +1,15 @@
+class Solution {
+    public String firstPalindrome(String[] words) {
+        StringBuilder result=new StringBuilder();
+        for(String word:words)
+        {
+            StringBuilder sb=new StringBuilder(word);
+            sb.reverse();
+            if(word.equals(sb.toString()))
+            {
+              return word;
+            } 
+        }
+        return "";
+    }
+}
